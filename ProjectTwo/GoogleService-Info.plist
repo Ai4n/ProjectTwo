@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>517901562165-e7c4p98tt6vd0rja35c72mdksksorhhg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.517901562165-e7c4p98tt6vd0rja35c72mdksksorhhg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAxg-yTHd8TKU-3C7BZHR5u577cPGEH93w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>517901562165</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.akhan.projectbiblioteka</string>
+	<key>PROJECT_ID</key>
+	<string>projectbiblioteka-d9a37</string>
+	<key>STORAGE_BUCKET</key>
+	<string>projectbiblioteka-d9a37.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:517901562165:ios:0eda002b12f633dd6d9c7c</string>
+	<key>DATABASE_URL</key>
+	<string>https://projectbiblioteka-d9a37.firebaseio.com</string>
+</dict>
+</plist>
