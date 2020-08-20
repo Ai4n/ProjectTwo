@@ -45,7 +45,7 @@ class ImageCache {
     
     // var isFetching: ((Bool) -> Void)?
     
-    func getRandomImage(onComplete:(UIImage?) -> Void){
+    func getRandomImage(onComplete: @escaping (UIImage?) -> Void){
         guard !urlStorage.isEmpty else{
             onComplete(nil)
             return
@@ -53,6 +53,7 @@ class ImageCache {
         let size = urlStorage.count
         let index = Int.random(in: 0..<size)
         let randomUrl = URL(string: urlStorage[index])!
+        downloadImage(url: randomUrl, onComplete: onComplete)
     }
     
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
@@ -66,14 +67,12 @@ class ImageCache {
         }
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
-           // print(response?.suggestedFilename ?? url.lastPathComponent)
-           //  print("Download Finished")
             DispatchQueue.main.async() {
+                self.save(url: url, image: UIImage(data: data))
                 onComplete(UIImage(data: data))
             }
         }
     }
-    
     
     func save(url: URL, image: UIImage?){
         storage[url] = image

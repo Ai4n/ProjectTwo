@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func deleteDidPress(_ sender: Any) {
-        guard let url = currentImageURL else { return }
+        guard let url = cache.currentImageURL else { return }
         cache.delete(url: url)
         image.image = nil
     }
@@ -40,7 +40,9 @@ class ViewController: UIViewController {
         cache.getRandomImage(onComplete: { randomImage in
             self.loader.stopAnimating()
             self.loader.isHidden = true
+            self.image.image = randomImage
         })
+        
     }
     
     func calculateConstraint() {
